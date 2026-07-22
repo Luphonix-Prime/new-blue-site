@@ -246,5 +246,29 @@ html, body {
     min-height: 4.5rem !important;
     line-height: 1.3 !important;
     padding: 1rem 1.2rem !important;
-  }
 }
+
+/* Fix CTA button text clipping in nav toggle badge */
+.nav__pageToggle.is-cta {
+  width: auto !important;
+  min-width: max-content !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+.nav__pageCta {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  height: 100% !important;
+  padding: 0 2rem !important;
+  pointer-events: auto !important;
+}
+.nav__pageCta .button__inner {
+  font-size: 1.5rem !important;
+  letter-spacing: 0.03em !important;
+  white-space: nowrap !important;
+}
+
