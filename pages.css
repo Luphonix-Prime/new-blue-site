@@ -1,0 +1,3 @@
+.nav.page-nav{position:relative;height:78px;background:var(--ink)}
+.nav.page-nav .site-menu{color:#fff}
+@media(max-width:760px){.nav.page-nav{height:65px}}
