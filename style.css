@@ -286,4 +286,28 @@ html, body {
   }
 }
 
+/* Fix mobile text overflow in aiPitch cards */
+@media screen and (orientation:portrait) and (max-width:800px), screen and (max-width:800px) {
+  .aiPitch {
+    padding: 4rem 1.5rem !important;
+  }
+  .aiPitch__card {
+    padding: 2.2rem 1.6rem 2.2rem 8rem !important;
+    min-height: auto !important;
+  }
+  .aiPitch__cardIcon {
+    top: 2.2rem !important;
+    left: 1.8rem !important;
+    width: 4.8rem !important;
+    height: 4.8rem !important;
+  }
+  .aiPitch__cardLabel {
+    font-size: clamp(2rem, 5.5vw, 2.6rem) !important;
+    line-height: 1.15 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+
 
