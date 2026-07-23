@@ -266,9 +266,24 @@ html, body {
   padding: 0 2rem !important;
   pointer-events: auto !important;
 }
+}
 .nav__pageCta .button__inner {
   font-size: 1.5rem !important;
   letter-spacing: 0.03em !important;
   white-space: nowrap !important;
 }
+
+@media screen and (min-width: 801px) {
+  .aiFeatures__cardMedia--imageOnly img {
+    display: block !important;
+    height: 60rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    object-fit: contain;
+  }
+}
+
 
