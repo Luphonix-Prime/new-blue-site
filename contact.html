@@ -60,8 +60,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap" rel="stylesheet">
   
-    
-                        
+    <script>
+      (function() {
+        function hidePrivacyTerms() {
+          var all = document.querySelectorAll('*');
+          for (var i = 0; i < all.length; i++) {
+            var el = all[i];
+            if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') continue;
+            if (el.children.length === 0 && el.textContent) {
+              var txt = el.textContent.toLowerCase();
+              if (txt.indexOf('privacy policy') !== -1 || txt.indexOf('terms and conditions') !== -1 || txt.indexOf('see the privacy') !== -1) {
+                var target = el.closest('.legal-consent-container') || el.closest('.hs-field-type-boolean_checkbox') || el.closest('.hs-richtext') || el.closest('p') || el.closest('label') || el;
+                if (target) target.style.setProperty('display', 'none', 'important');
+              }
+            }
+          }
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', hidePrivacyTerms);
+        } else {
+          hidePrivacyTerms();
+        }
+        var observer = new MutationObserver(hidePrivacyTerms);
+        var startObs = function() {
+          if (document.body) observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+        };
+        if (document.body) { startObs(); } else { document.addEventListener('DOMContentLoaded', startObs); }
+        setInterval(hidePrivacyTerms, 500);
+      })();
+    </script>
 </head>
 <body>
 
@@ -341,14 +368,10 @@ src="https://www.facebook.com/tr?id=355289207619127&ev=PageView&noscript=1"
                                                     <div><a href="https://www.instagram.com/luphonix.tech/" target="_blank" class="footer__link underlink">Instagram</a></div>
                                                     <div><a href="https://www.linkedin.com/in/luphonix-innovators-0669bb359/" target="_blank" class="footer__link underlink">LinkedIn</a></div>
                                             </div>
-                    <div class="footer__col u-showMobile">
-                        <a href="terms-privacy.html" class="underlink u-showMobile">Terms and Privacy</a>
-                    </div>
                 </div>
             </div>
         </div>
         <div class="footer__bottom">
-            <a href="terms-privacy.html" class="underlink u-hideMobile">Terms and Privacy</a>
             <span>Copyright Luphonix System 2026</span>
             <a href="#top" class="underlink">back to top</a>
         </div>

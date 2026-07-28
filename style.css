@@ -309,5 +309,9 @@ html, body {
   }
 }
 
-
-
+/* Hide HubSpot form legal consent & privacy policy / terms disclaimers */
+.legal-consent-container,
+.hs-richtext,
+.hs-form-boolean-checkbox-display {
+  display: none !important;
+}
