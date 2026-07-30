@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Email Notification - Luphonix</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Helvetica, Arial, sans-serif; background-color: #0b0f19; color: #ffffff;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 30px auto; background-color: #121824; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <!-- Header -->
+        <tr>
+            <td style="padding: 30px; background: linear-gradient(135deg, #0052ff 0%, #00d2ff 100%); text-align: center;">
+                <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: 1px; color: #ffffff; text-transform: uppercase;">LUPHONIX</h1>
+                <p style="margin: 5px 0 0 0; font-size: 14px; color: rgba(255, 255, 255, 0.9); font-weight: 500;">New Contact Inquiry Received</p>
+            </td>
+        </tr>
+
+        <!-- Content -->
+        <tr>
+            <td style="padding: 30px;">
+                <p style="font-size: 16px; line-height: 1.6; color: #cbd5e1; margin-top: 0;">
+                    You have received a new message from the contact form on your website. Here are the details:
+                </p>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 20px; background-color: #1e293b; border-radius: 8px; overflow: hidden;">
+                    <tr>
+                        <td style="padding: 12px 16px; font-weight: 600; color: #94a3b8; width: 120px; border-bottom: 1px solid #334155;">Full Name:</td>
+                        <td style="padding: 12px 16px; color: #f8fafc; font-weight: 500; border-bottom: 1px solid #334155;">{{user_name}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px 16px; font-weight: 600; color: #94a3b8; border-bottom: 1px solid #334155;">Email Address:</td>
+                        <td style="padding: 12px 16px; color: #38bdf8; font-weight: 500; border-bottom: 1px solid #334155;">
+                            <a href="mailto:{{user_email}}" style="color: #38bdf8; text-decoration: none;">{{user_email}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px 16px; font-weight: 600; color: #94a3b8; border-bottom: 1px solid #334155;">Subject:</td>
+                        <td style="padding: 12px 16px; color: #f8fafc; font-weight: 500; border-bottom: 1px solid #334155;">{{subject}}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px 16px; font-weight: 600; color: #94a3b8; vertical-align: top;">Message:</td>
+                        <td style="padding: 12px 16px; color: #f8fafc; font-weight: 400; line-height: 1.6;">{{message}}</td>
+                    </tr>
+                </table>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="mailto:{{user_email}}" style="display: inline-block; padding: 12px 28px; background-color: #0052ff; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px; transition: background-color 0.3s ease;">
+                        Reply to Sender
+                    </a>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <td style="padding: 20px 30px; background-color: #0f172a; text-align: center; border-top: 1px solid #1e293b;">
+                <p style="margin: 0; font-size: 12px; color: #64748b;">
+                    Sent automatically via Luphonix SMTP Integration system.<br>
+                    &copy; 2026 Luphonix System. All rights reserved.
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

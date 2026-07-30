@@ -284,17 +284,35 @@ src="https://www.facebook.com/tr?id=355289207619127&ev=PageView&noscript=1"
                                             </div>
 
             <div class="formHeader__form">
-                                                                                        <div class="HB">
-                        <script data-swup-reload-script  charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-<script data-swup-reload-script >
-  hbspt.forms.create({
-    portalId: "24271289",
-    formId: "7b83c57b-8220-495d-b141-367fc1488ea5",
-    region: "na1"
-  });
-</script>
+                <h2 class="h1 formHeader__formHeading" style="margin-bottom: 1.5rem;">Send Us a Message</h2>
+                <form id="luphonix-smtp-contact-form" onsubmit="handleContactSubmit(event)" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="contact-name" style="font-size: 0.9rem; font-weight: 600; color: #94a3b8;">Your Name *</label>
+                        <input type="text" id="contact-name" name="name" required placeholder="John Doe" style="width: 100%; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(15, 23, 42, 0.6); color: #fff; font-size: 1rem; outline: none;" />
                     </div>
-                                
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="contact-email" style="font-size: 0.9rem; font-weight: 600; color: #94a3b8;">Email Address *</label>
+                        <input type="email" id="contact-email" name="email" required placeholder="john@example.com" style="width: 100%; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(15, 23, 42, 0.6); color: #fff; font-size: 1rem; outline: none;" />
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="contact-subject" style="font-size: 0.9rem; font-weight: 600; color: #94a3b8;">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" placeholder="Project Inquiry / Demo Request" style="width: 100%; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(15, 23, 42, 0.6); color: #fff; font-size: 1rem; outline: none;" />
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="contact-message" style="font-size: 0.9rem; font-weight: 600; color: #94a3b8;">Message *</label>
+                        <textarea id="contact-message" name="message" rows="4" required placeholder="How can we help your business?" style="width: 100%; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(15, 23, 42, 0.6); color: #fff; font-size: 1rem; outline: none; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="button button--black" style="cursor: pointer; border: none; align-self: flex-start; margin-top: 0.5rem;">
+                        <span class="button__inner">Send Message</span>
+                        <span class="button__inner">Send Message</span>
+                    </button>
+
+                    <div id="form-status-message" style="display: none;"></div>
+                </form>
             </div>
 
         </div>
@@ -389,6 +407,8 @@ src="https://www.facebook.com/tr?id=355289207619127&ev=PageView&noscript=1"
   <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js" integrity="sha512-0z8URjGET6GWnS1xcgiLBZBzoaS8BNlKayfZyQNKz4IRp+s7CKXx0yz7Eco2+TcwoeMBa5KMwmTX7Kus7Fa5Uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript" src="smtp-handler.js"></script>
   <script type="text/javascript" src="script.js"></script>
 
 
